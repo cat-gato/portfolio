@@ -1,0 +1,110 @@
+$font: Arial;
+$background: #1C1C1D;
+$purple: #DABFFF;
+$offwhite: #D9D9D9;
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: $background;
+    color: $offwhite;
+    font-family: $font;
+}
+.container {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+
+// Fonts and Text Specifics
+.welcome-text-medium {
+    font-size: 32px;
+}
+.purple-small {
+    color: $purple;
+    font-size: 26px;
+}
+
+
+// Center the Top Section
+#top {
+    height: 650px;
+    padding-top: 35%;
+    // Can I make this better?
+    .welcome-display {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 80px;
+        padding-right: 80px;
+        h1 {
+            font-size: 42px;
+        }
+    }
+    .cta-click {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+
+
+
+
+
+
+// Pretty Buttons
+.cat-buttons {
+    width: 200px;
+    display: inline-block;    
+    color: $offwhite;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 25px 25px;
+    background-color: #ffffff00;
+    border: 2px solid $offwhite;
+    border-radius: 25px;
+    box-shadow: 0 9px $offwhite;
+    &:active {
+        color: #a8a8a8;
+        box-shadow: 0 5px #a8a8a8;
+        transform: translateY(4px);
+    }
+}
+
+
+
+
+
+
+
+
+.projects {
+    border-top: 5px solid $purple;
+    display: flex;
+    flex-direction: column;
+    padding-left: 80px;
+    padding-right: 80px;
+    h2 {
+        font-size: 36px;
+    }
+}
+.project-flex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.project-bubble {
+    max-width: 300px;
+    min-width: 100px;
+    border: 2px solid $offwhite;
+    border-radius: 25px;
+    padding: 25px;
+}
