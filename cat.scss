@@ -16,11 +16,16 @@ body {
 
 // Navbar
 nav {
+
     position: absolute;
     height: 100px;
     top: 0;
     width: 100%;
+
+    // This makes the mobile menu function
     #navLinks {
+        display: none;
+        width: 0;
         height: 72px;
         background-color: #262627;
     }
@@ -42,7 +47,7 @@ nav {
         }
     }
 
-    
+    // Hamburger Menu for Mobile
     .icon {
         position: absolute;
         top: 10px;
@@ -85,19 +90,21 @@ nav {
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    //align-items: center;
     h2 {
         font-size: 42px;
         margin-right: 300px;
         padding-bottom: 20px;
     }
     .project-flex {
+        align-self: center;
         display: flex;
         align-items: center;
         flex-direction: column;
         gap: 25px;
         padding-left: 25px;
         padding-right: 25px;
+        padding-bottom: 35px;
         .project-bubble {
             max-width: 300px;
             min-width: 100px;
@@ -168,16 +175,48 @@ nav {
 
 
 
+#skills {
+    display: flex;
+    flex-direction: column;
+    h3 {
+        padding-left: 35px;
+        font-size: 32px;
 
+    }
 
-
-footer {
-    width: 100%;
-    height: 300px;
+}
+#skill-collection {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px;
+    align-self: center;
+}
+#skill-collection button {
+    margin: 5px;
+    border: none;
+    width: 120px;
+    height: 50px;
+    color: $offwhite;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #01a9ec;
+    border-radius: 15px;
 }
 
 
 
+
+footer {
+    color: $background;
+    background-color: $purple;
+    width: 100%;
+    height: 15vh;
+}
+
+
+// Tablets and big phones
 @media only screen and (min-width: 620px) {
     // Center the Top Section
     #top {
@@ -204,19 +243,99 @@ footer {
 }
 
 
-/* Animation classes */
+
+
+// Desktops and big tablets
+@media only screen and (min-width: 800px) {
+// Navbar
+nav {
+    #navLinks {
+        width: 100%;
+        display: block;
+        margin-top: 0;
+    }
+    ul {
+        overflow: auto;
+    }
+    .icon {
+        display: none;
+    }
+}
+
+
+
+    // Top Section
+    #top {
+        margin-top: 15vh;
+        margin-bottom: 18vh;
+        width: 100%;
+        .welcome-display {
+            h1 {
+                font-size: 52px;
+            }
+        }
+        .cta-click {
+        }
+    }
+
+// Projects
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-size: 42px;
+        margin-right: 650px;
+        margin-left: 50px;
+    }
+    .project-flex {
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        gap: 25px;
+        padding-left: 0;
+        padding-right: 0;
+        .project-bubble {
+            h3 {
+                font-size: 36px;
+            }
+            .post-preview {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+
+
+
+    // Span Fonts and Text Specifics
+    .welcome-text-medium {
+        font-size: 42px;
+    }
+    .purple-small {
+        color: $purple;
+        font-size: 36px;
+    }
+    
+}
+
+
+
+// Animate
 
 #navLinks.menu-in {
-    display: block;
     animation: menu-in 0.1s ease-in forwards;
+    display: block;
 }
 
 #navLinks.menu-out {
-    width: 0;
     animation: menu-out 0.2s ease-out backwards;
 }
 
-/* Animation keyframes */
+// Animation Keyframes
 
 @keyframes menu-in {
   0% {
