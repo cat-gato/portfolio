@@ -8,8 +8,26 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="cat.css">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+
+
+
+    <nav>
+        <ul id="navLinks" class="menu-out">
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">blog</a></li>
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+
+
     <section id="top">
         <!-- Is there a better way to do this? -->
          <div class="welcome-display">
@@ -34,22 +52,22 @@
             <article class="project-bubble">
                 <h3>Feline Cloud</h3>
                 <p class="post-preview">A website that has been in the works for way too long.  This project will provide hosting services for both...</p>
-                <p class="read-more">read more</p>
+                <a href="#" class="read-more">read more</a>
             </article>
             <article class="project-bubble">
                 <h3>Art Website</h3>
                 <p class="post-preview">A personal project of mine. I want to be able to display my portfolio of art in a fun and easy way for people to...</p>
-                <p class="read-more">read more</p>
+                <a href="#" class="read-more">read more</a>
             </article>
             <article class="project-bubble">
                 <h3>Minecraft Server</h3>
                 <p class="post-preview">A Minecraft server that I made to learn and experiment on. However, as I've developed it more, it's....</p>
-                <p class="read-more">read more</p>
+                <a href="#" class="read-more">read more</a>
             </article>
             <article class="project-bubble">
                 <h3>Home Servers</h3>
                 <p class="post-preview">Some people also refer to home servers as a "Home Lab" which can be a place to try ideas and...</p>
-                <p class="read-more">read more</p>
+                <a href="#" class="read-more">read more</a>
             </article>
 
         </div>
@@ -58,5 +76,9 @@
 
 
 
+    <footer>
+        <h1>foot</h1>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
