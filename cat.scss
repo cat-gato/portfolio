@@ -1,3 +1,4 @@
+// Varibles
 $font: Arial;
 $background: #1C1C1D;
 $purple: #DABFFF;
@@ -12,139 +13,22 @@ body {
     font-family: $font;
 }
 
+// ---------------
+// - Reuse these -
+// ---------------
 
-
-// Navbar
-nav {
-
-    position: absolute;
-    height: 100px;
-    top: 0;
-    width: 100%;
-
-    // This makes the mobile menu function
-    #navLinks {
-        display: none;
-        width: 0;
-        height: 72px;
-        background-color: #262627;
-    }
-    ul {
-        padding-left: 0;
-        overflow: hidden;
-        list-style-type: none;
-        li {
-            display: inline-block;
-            padding-left: 50px;
-            padding-right: 20px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-        a {
-            text-decoration: none;
-            color: white;
-            font-size: 42px;
-        }
-    }
-
-    // Hamburger Menu for Mobile
-    .icon {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        color: $purple;     
-        font-size: 72px;
-    }
+.readMore {
+    color: #e0caff;
+    float: right;
 }
-
-
-
-
-
-
-// Center the Top Section
-#top {
-    margin-top: 20vh;
-    margin-bottom: 20vh;
-    // Can I make this better?
-    .welcome-display {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        h1 {
-            font-size: 42px;
-        }
-    }
-    .cta-click {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        align-items: center;
-    }
+.welcome-text-medium {
+    font-size: 42px;
 }
-
-// Projects
-.projects {
-    border-top: 5px solid $purple;
-
-
-    display: flex;
-    flex-direction: column;
-    //align-items: center;
-    h2 {
-        font-size: 42px;
-        margin-right: 300px;
-        padding-bottom: 20px;
-    }
-    .project-flex {
-        align-self: center;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 25px;
-        padding-left: 25px;
-        padding-right: 25px;
-        padding-bottom: 35px;
-        .project-bubble {
-            max-width: 300px;
-            min-width: 100px;
-            border: 2px solid $offwhite;
-            border-radius: 25px;
-            padding-top: 0;
-            padding-left: 25px;
-            padding-right: 25px;
-            padding-bottom: 25px;
-            box-shadow: 0 9px $offwhite;
-            &:active {
-                color: #a8a8a8;
-                box-shadow: 0 5px #a8a8a8;
-                transform: translateY(4px);
-            }
-            h3 {
-                margin-bottom: 0;
-                font-size: 36px;
-            }
-            .post-preview {
-                margin-bottom: 0;
-                font-size: 16px;
-            }
-            a {
-                text-decoration: none;
-            }
-            .read-more {
-                color: #e0caff;
-                float: right;
-            }
-        }
-    }
+.purple-small {
+    color: $purple;
+    font-size: 36px;
 }
-
-
-
-
-
-
-// Pretty Buttons
+// Global Buttons
 .cat-buttons {
     width: 200px;
     display: inline-block;    
@@ -164,59 +48,194 @@ nav {
     }
 }
 
-// Span Fonts and Text Specifics
-.welcome-text-medium {
-    font-size: 32px;
-}
-.purple-small {
-    color: $purple;
-    font-size: 26px;
-}
-
-
-
-#skills {
-    display: flex;
-    flex-direction: column;
-    h3 {
-        padding-left: 35px;
-        font-size: 32px;
-
+// Navbar
+nav {
+    position: absolute;
+    height: 100px;
+    top: 0;
+    width: 100%;
+    // This makes the mobile menu function
+    #navLinks {
+        display: none;
+        width: 0;
+        height: 72px;
+        background-color: #262627;
     }
-
+    ul {
+        padding-left: 0;
+        overflow: hidden;
+        list-style-type: none;
+        li {
+            display: inline-block;
+            padding-left: 50px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        a {
+            font-size: 42px;
+            text-decoration: none;
+            color: white;
+        }
+    }
+    // Hamburger Menu for Mobile
+    .icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: $purple;     
+        font-size: 72px;
+    }
 }
-#skill-collection {
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 25px;
+// Homepage Call to Action
+#top {
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    .welcome-display {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            font-size: 42px;
+        }
+    }
+    .cta-click {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+// All Sections
+section {
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+    h2 {
+        padding-left: 60px;
+        font-size: 42px;
+        padding-bottom: 20px;
+    }
+}
+
+.dynamicBubble {
     align-self: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 35px;
+    .previewBubble {
+        max-width: 300px;
+        min-width: 100px;
+        border: 2px solid $offwhite;
+        border-radius: 25px;
+        padding-top: 0;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 25px;
+        box-shadow: 0 9px $offwhite;
+        &:active {
+            color: #a8a8a8;
+            box-shadow: 0 5px #a8a8a8;
+            transform: translateY(4px);
+        }
+        h3 {
+            margin-bottom: 0;
+            font-size: 36px;
+        }
+        .post-preview {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
 }
-#skill-collection button {
-    margin: 5px;
-    border: none;
-    width: 120px;
-    height: 50px;
-    color: $offwhite;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    background-color: #01a9ec;
-    border-radius: 15px;
+
+// Projects
+#projectPreview {
+    border-top: 5px solid $purple;
+}
+// Skills
+#skills {
+    border-top: 5px solid $purple;
+    h2 {
+        padding-right: 50px;
+        text-align: right;
+    }
+    #skill-collection {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 25px;
+        align-self: center;
+        button {
+            margin: 5px;
+            border: none;
+            width: 120px;
+            height: 50px;
+            color: $offwhite;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            background-color: #01a9ec;
+            border-radius: 15px;
+        }
+    }
+}
+
+// Blog
+#blogPreview {
+    border-top: 5px solid $purple;
 }
 
 
+#aboutMe {
+    border-top: 5px solid $purple;
+    h2 {
+        text-align: right;
+        padding-right: 50px;
+    }
+    article {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        img {
+            border: #D9D9D9;
+        }
+        p {
+            max-width: 250px;
+        }
+    }
+}
 
-
+// -----------------------
+//         FOOTER
+// -----------------------
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: $background;
     background-color: $purple;
     width: 100%;
     height: 15vh;
+    a {
+        font-size: 26px;
+        text-decoration: none;
+        color: white;
+    }
 }
 
-
+// -----------------------
 // Tablets and big phones
+// -----------------------
+
 @media only screen and (min-width: 620px) {
     // Center the Top Section
     #top {
@@ -241,11 +260,10 @@ footer {
     }
     
 }
-
-
-
-
+// -----------------------
 // Desktops and big tablets
+// -----------------------
+
 @media only screen and (min-width: 800px) {
 // Navbar
 nav {
@@ -261,10 +279,6 @@ nav {
         display: none;
     }
 }
-
-
-
-    // Top Section
     #top {
         margin-top: 15vh;
         margin-bottom: 18vh;
@@ -277,66 +291,48 @@ nav {
         .cta-click {
         }
     }
+    // Projects
+    .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-// Projects
-.projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    h2 {
-        font-size: 42px;
-        margin-right: 650px;
-        margin-left: 50px;
-    }
-    .project-flex {
-        display: inline-grid;
-        grid-template-columns: auto auto;
-        gap: 25px;
-        padding-left: 0;
-        padding-right: 0;
-        .project-bubble {
-            h3 {
-                font-size: 36px;
-            }
-            .post-preview {
-                font-size: 16px;
+        h2 {
+            font-size: 42px;
+            margin-right: 650px;
+            margin-left: 50px;
+        }
+        .project-flex {
+            display: inline-grid;
+            grid-template-columns: auto auto;
+            gap: 25px;
+            padding-left: 0;
+            padding-right: 0;
+            .project-bubble {
+                h3 {
+                    font-size: 36px;
+                }
+                .post-preview {
+                    font-size: 16px;
+                }
             }
         }
     }
+
 }
 
-
-
-
-
-    // Span Fonts and Text Specifics
-    .welcome-text-medium {
-        font-size: 42px;
-    }
-    .purple-small {
-        color: $purple;
-        font-size: 36px;
-    }
-    
-}
-
-
-
-// Animate
-
+// -----------------------
+// -   Animate NavBar    -
+// -----------------------
 #navLinks.menu-in {
     animation: menu-in 0.1s ease-in forwards;
     display: block;
 }
-
 #navLinks.menu-out {
     animation: menu-out 0.2s ease-out backwards;
 }
-
-// Animation Keyframes
-
+// Keyframes
 @keyframes menu-in {
   0% {
     width: 0;
