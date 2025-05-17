@@ -9,7 +9,7 @@
     <meta name="description" content="The Portfolio!">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="cat.css">
+    <link rel="stylesheet" href="css/cat.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,110 +28,128 @@
             <i class="fa fa-bars"></i>
         </a>
     </nav>
+    
+    <!-- Contain all content excluding navbar and footer -->
+    <div id="container">
+        <section id="top">
+            <div class="welcome-display">
+                <h1>
+                    Hello!<br>
+                    <span class="welcome-text-medium">I'm Jake</span><br>
+                    <span class="purple-small">I make things</span>
+                </h1>
+                <img src="images/cat.svg" width="230" height="230">
+            </div>
+            <!-- BUTTONS! -->
+            <div class="cta-click">
+                <button class="cat-buttons">contact me</button>
+                <button class="cat-buttons">skills</button>
+            </div>
+        </section>
+
+        <section id="projectPreview">
+            <!-- This div main purpose is to keep the content somewhat in the center while allowing some things to take 100% of the width of the display -->
+            <div class="containContent">
+                <h2>projects</h2>
+                <div class="dynamicBubble">
+                    <article class="previewBubble">
+                        <h3>Feline Cloud</h3>
+                        <p class="post-preview">A website that has been in the works for way too long.  This project will provide hosting services for both...</p>
+                        <a href="#" class="readMore">read more</a>
+                    </article>
+                    <article class="previewBubble">
+                        <h3>Art Website</h3>
+                        <p class="post-preview">A personal project of mine. I want to be able to display my portfolio of art in a fun and easy way for people to...</p>
+                        <a href="#" class="readMore">read more</a>
+                    </article>
+                    <article class="previewBubble">
+                        <h3>Minecraft Server</h3>
+                        <p class="post-preview">A Minecraft server that I made to learn and experiment on. However, as I've developed it more, it's....</p>
+                        <a href="#" class="readMore">read more</a>
+                    </article>
+                    <article class="previewBubble">
+                        <h3>Home Servers</h3>
+                        <p class="post-preview">Some people also refer to home servers as a "Home Lab" which can be a place to try ideas and...</p>
+                        <a href="#" class="readMore">read more</a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="skills">
+            <div class="containContent">
+                <h2>skills</h2>
+                <div id="skill-collection">
+                    <button>Linux</button>
+                    <button>SQL</button>
+                    <button>3D Printing</button>
+                    <button>JavaScript</button>
+                    <button>HTML</button>
+                    <button>Figma</button>
+                    <button>Wordpress</button>
+                    <button>Docker</button>
+                    <button>CSS</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="blogPreview">
+            <div class="containContent">
+                <h2>from the blog</h2>
+                <div class="dynamicBubble">
+                    <article class="previewBubble">
+                        <h3>Feline Cloud</h3>
+                        <p class="post-preview">A website that has been in the works for way too long.  This project will provide hosting services for both...</p>
+                        <a href="#" class="readMore">read more</a>
+                    </article>
+                    <article class="previewBubble">
+                        <h3>Art Website</h3>
+                        <p class="post-preview">A personal project of mine. I want to be able to display my portfolio of art in a fun and easy way for people to...</p>
+                        <a href="#" class="readMore">read more</a>
+                    </article>
+                    <article class="previewBubble">
+                        <h3>Minecraft Server</h3>
+                        <p class="post-preview">A Minecraft server that I made to learn and experiment on. However, as I've developed it more, it's....</p>
+                        <a href="#" class="readMore">read more</a>
+                    </article>
+                    <article class="previewBubble">
+                        <h3>Home Servers</h3>
+                        <p class="post-preview">Some people also refer to home servers as a "Home Lab" which can be a place to try ideas and...</p>
+                        <a href="#" class="readMore">read more</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="aboutMe">
+            <div class="containContent">
+                <h2>about me</h2>
+                <article class="dynamicBubble">
+                    <img height="128" width="128" src="images/school_picture.jpg">
+                    <p>Hi! I love Web Design, working with computers, and just all around creating things</p>
+                </article>
+            </div>
+        </section>
 
 
 
-    <section id="top">
-        <!-- Is there a better way to do this? -->
-         <div class="welcome-display">
-            <h1>
-                Hello!<br>
-                <span class="welcome-text-medium">I'm Jake</span><br>
-                <span class="purple-small">I make things</span>
-            </h1>
-            <img src="cat.svg" width="230" height="230">
-         </div>
-        <!-- BUTTONS! -->
-        <div class="cta-click">
-            <button class="cat-buttons">contact me</button>
-            <button class="cat-buttons">skills</button>
-        </div>
-    </section>
-
-    <section id="projectPreview">
-        <h2>projects</h2>
-
-        <div class="dynamicBubble">
-            <article class="previewBubble">
-                <h3>Feline Cloud</h3>
-                <p class="post-preview">A website that has been in the works for way too long.  This project will provide hosting services for both...</p>
-                <a href="#" class="readMore">read more</a>
-            </article>
-            <article class="previewBubble">
-                <h3>Art Website</h3>
-                <p class="post-preview">A personal project of mine. I want to be able to display my portfolio of art in a fun and easy way for people to...</p>
-                <a href="#" class="readMore">read more</a>
-            </article>
-            <article class="previewBubble">
-                <h3>Minecraft Server</h3>
-                <p class="post-preview">A Minecraft server that I made to learn and experiment on. However, as I've developed it more, it's....</p>
-                <a href="#" class="readMore">read more</a>
-            </article>
-            <article class="previewBubble">
-                <h3>Home Servers</h3>
-                <p class="post-preview">Some people also refer to home servers as a "Home Lab" which can be a place to try ideas and...</p>
-                <a href="#" class="readMore">read more</a>
-            </article>
-
-        </div>
-    </section>
 
 
-    <section id="skills">
-        <h2>skills</h2>
-        <div id="skill-collection">
-            <button>Linux</button>
-            <button>SQL</button>
-            <button>3D Printing</button>
-            <button>JavaScript</button>
-            <button>HTML</button>
-            <button>Figma</button>
-            <button>Wordpress</button>
-            <button>Docker</button>
-            <button>CSS</button>
-        </div>
-    </section>
 
-    <section id="blogPreview">
-        <h2>from the blog</h2>
-        <div class="dynamicBubble">
-            <article class="previewBubble">
-                <h3>Feline Cloud</h3>
-                <p class="post-preview">A website that has been in the works for way too long.  This project will provide hosting services for both...</p>
-                <a href="#" class="readMore">read more</a>
-            </article>
-            <article class="previewBubble">
-                <h3>Art Website</h3>
-                <p class="post-preview">A personal project of mine. I want to be able to display my portfolio of art in a fun and easy way for people to...</p>
-                <a href="#" class="readMore">read more</a>
-            </article>
-            <article class="previewBubble">
-                <h3>Minecraft Server</h3>
-                <p class="post-preview">A Minecraft server that I made to learn and experiment on. However, as I've developed it more, it's....</p>
-                <a href="#" class="readMore">read more</a>
-            </article>
-            <article class="previewBubble">
-                <h3>Home Servers</h3>
-                <p class="post-preview">Some people also refer to home servers as a "Home Lab" which can be a place to try ideas and...</p>
-                <a href="#" class="readMore">read more</a>
-            </article>
 
-        </div>
-    </section>
+    </div>
 
-    <section id="aboutMe">
-        <h2>about me</h2>
-        <article class="dynamicBubble">
-            <img height="128" width="128" src="cat.svg">
-            <p>Hi! I love Web Design, working with computers, and just all around creating things</p>
-        </article>
-        
-    </section>
+
+
+
 
 
 
 
     <footer>
+        <img src="images/cat.svg" width="64" height="64">
         <a href="#">Portal Page</a>
     </footer>
 
@@ -140,6 +158,6 @@
 
 
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
