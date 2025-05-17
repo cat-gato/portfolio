@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Project: Feline Cloud</title>
+
+    <!--SEO-->
+    <meta name="description" content="The Portfolio!">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/cat.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+
+    <nav>
+        <ul id="navLinks">
+            <li><a href="index.html">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">blog</a></li>
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    
+    <!-- Contain all content excluding navbar and footer -->
+    <div id="container">
+        <section id="projectPage">
+            <!-- This div main purpose is to keep the content somewhat in the center while allowing some things to take 100% of the width of the display -->
+            <div class="containContent">
+                <h1>Feline Cloud</h1>
+                <div class="dynamicBubble">
+                    <article class="projectInfo">
+                        <p>
+                            A website that has been in the works for way too long.
+                            This project will provide hosting services for both Game, and Web servers. 
+                            When I was younger and wanted to host my own website, 
+                            it interested me how these services worked and functioned in the back-end. 
+                            I eventually learned how they worked and setup a small private hosting infrastructure 
+                            that I have used to host personal projects and services, but also hosting for close 
+                            friends and family. Working on this over the years was a great source of learning about 
+                            a lot of different things, from using Linux daily, to learning programming.
+                        </p>
+                    </article>
+
+                    <article class="projectInfo">
+                        <img height="469" width="800" src="images/felineCloud-img1.png">
+                        <p class="center">version from 2018</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="aboutMe">
+            <div class="containContent">
+                <h2>about me</h2>
+                <article class="dynamicBubble">
+                    <img height="128" width="128" src="images/school_picture.jpg">
+                    <p>Hi! I love Web Design, working with computers, and just all around creating things</p>
+                </article>
+            </div>
+        </section>
+    </div><!-- End of Container-->
+
+    <footer>
+        <img src="images/cat.svg" width="64" height="64">
+        <a href="#">Portal Page</a>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

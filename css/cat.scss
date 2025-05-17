@@ -14,13 +14,13 @@ body {
 }
 
 
+
 #container {
 }
 
 // ---------------
 // - Reuse these -
 // ---------------
-
 .readMore {
     color: #e0caff;
     float: right;
@@ -52,6 +52,13 @@ body {
     }
 }
 
+
+// Simple text center
+.center {
+    text-align: center;
+}
+
+
 // Navbar
 nav {
     position: absolute;
@@ -60,7 +67,6 @@ nav {
     width: 100%;
     // This makes the mobile menu function
     #navLinks {
-        display: none;
         width: 0;
         height: 72px;
         background-color: #262627;
@@ -84,6 +90,7 @@ nav {
     }
     // Hamburger Menu for Mobile
     .icon {
+        display: block;
         position: absolute;
         top: 10px;
         right: 10px;
@@ -93,8 +100,8 @@ nav {
 }
 // Homepage Call to Action
 #top {
-    margin-top: 20vh;
-    margin-bottom: 20vh;
+    margin-top: 300px;
+    margin-bottom: 300px;
     .welcome-display {
         display: flex;
         justify-content: center;
@@ -116,7 +123,6 @@ section {
     padding-top: 20px;
     padding-bottom: 10px;
     h2 {
-        padding-left: 60px;
         font-size: 42px;
         padding-bottom: 20px;
     }
@@ -124,20 +130,23 @@ section {
 
 
 .containContent {
-    max-width: 960px;
+    max-width: 800px;
     margin: auto;
+    padding-left: 50px;
+    padding-right: 50px;
 
 }
 
 .dynamicBubble {
     align-self: center;
-    display: flex;
     align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     gap: 25px;
+    padding-bottom: 60px;
     padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 35px;
     .previewBubble {
         max-width: 300px;
         min-width: 100px;
@@ -147,12 +156,6 @@ section {
         padding-left: 25px;
         padding-right: 25px;
         padding-bottom: 25px;
-        box-shadow: 0 9px $offwhite;
-        &:active {
-            color: #a8a8a8;
-            box-shadow: 0 5px #a8a8a8;
-            transform: translateY(4px);
-        }
         h3 {
             margin-bottom: 0;
             font-size: 36px;
@@ -167,23 +170,47 @@ section {
     }
 }
 
+
+
+
+#projectPage {
+    padding-top: 100px;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+    .projectInfo {
+        h2 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+}
+
 // Projects
 #projectPreview {
     border-top: 5px solid $purple;
 }
+
+
 // Skills
 #skills {
     border-top: 5px solid $purple;
     h2 {
-        padding-right: 50px;
-        text-align: right;
+        padding-bottom: 0;
     }
     #skill-collection {
         justify-content: center;
         display: flex;
         flex-wrap: wrap;
-        padding: 25px;
         align-self: center;
+        padding-bottom: 40px;
         button {
             margin: 5px;
             border: none;
@@ -207,10 +234,6 @@ section {
 
 #aboutMe {
     border-top: 5px solid $purple;
-    h2 {
-        text-align: right;
-        padding-right: 50px;
-    }
     article {
         flex-direction: row;
         justify-content: center;
@@ -242,123 +265,102 @@ footer {
     }
 }
 
-// -----------------------
-// Tablets and big phones
-// -----------------------
 
-@media only screen and (min-width: 620px) {
-    // Center the Top Section
-    #top {
-        width: 100%;
-        // Can I make this better?
-        .welcome-display {
-            h1 {
-                font-size: 52px;
-            }
-        }
-        .cta-click {
-        }
-    }
 
-    // Span Fonts and Text Specifics
-    .welcome-text-medium {
-        font-size: 42px;
-    }
-    .purple-small {
-        color: $purple;
-        font-size: 36px;
-    }
-    
-}
+
+
+
+
 // -----------------------
-// Desktops and big tablets
+// Tablets
 // -----------------------
 
 @media only screen and (min-width: 800px) {
-// Navbar
 nav {
+    top: 0;
+    width: 100%;
     #navLinks {
-        width: 100%;
         display: block;
+        width: 100%;
         margin-top: 0;
     }
     ul {
-        overflow: auto;
+        padding-left: 0;
+        padding-top: 0;
+        overflow: hidden;
+        list-style-type: none;
+        li {
+            display: inline-block;
+            padding-left: 50px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        a {
+            font-size: 42px;
+            text-decoration: none;
+            color: white;
+        }
     }
+    // Hamburger Menu for Mobile
     .icon {
         display: none;
     }
 }
-    #top {
-        margin-top: 15vh;
-        margin-bottom: 18vh;
-        width: 100%;
-        .welcome-display {
-            h1 {
-                font-size: 52px;
-            }
-        }
-        .cta-click {
-        }
+    .dynamicBubble {
+        flex-direction: row;
     }
-    // Projects
-    .projects {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+} // End of Tablet
 
-        h2 {
-            font-size: 42px;
-            margin-right: 650px;
-            margin-left: 50px;
-        }
-        .project-flex {
-            display: inline-grid;
-            grid-template-columns: auto auto;
-            gap: 25px;
-            padding-left: 0;
-            padding-right: 0;
-            .project-bubble {
-                h3 {
-                    font-size: 36px;
-                }
-                .post-preview {
-                    font-size: 16px;
-                }
-            }
-        }
-    }
+// -----------------------
+// Desktops and big tablets
+// -----------------------
+@media only screen and (min-width: 960px) {
 
-}
 
+
+
+} // End of Desktop
+
+
+
+
+
+
+
+
+
+// -----------------------
+// Mobile
+// -----------------------
+@media only screen and (max-width: 800px) {
 // -----------------------
 // -   Animate NavBar    -
 // -----------------------
-#navLinks.menu-in {
-    animation: menu-in 0.1s ease-in forwards;
-    display: block;
-}
-#navLinks.menu-out {
-    animation: menu-out 0.2s ease-out backwards;
-}
-// Keyframes
-@keyframes menu-in {
-  0% {
-    width: 0;
-}
+    #navLinks.menu-in {
+        animation: menu-in 0.7s ease-in forwards;
+    }
+    #navLinks.menu-out {
+        animation: menu-out 0.7s ease-in forwards;
+    }
+    // Keyframes
+    @keyframes menu-in {
+    0% {
+        width: 0;
+    }
 
-  100% {
-    width: 600px;
-  }
-}
+    100% {
+        width: 600px;
+    }
+    }
 
-@keyframes menu-out {
-  0% {
-    width: 600px;
-  }
+    @keyframes menu-out {
+    0% {
+        width: 600px;
+    }
 
-  100% {
-    width: 0px;
-  }
+    100% {
+        width: 0px;
+    }
 }
+} // End of Mobile
