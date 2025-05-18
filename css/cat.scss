@@ -1,4 +1,6 @@
-// Varibles
+// -----------------------
+//       VARIBLES        -
+// -----------------------
 $font: "Inclusive Sans", sans-serif;;
 $background: #1C1C1D;
 $purple: #DABFFF;
@@ -11,6 +13,13 @@ body {
     background-color: $background;
     color: $offwhite;
     font-family: $font;
+}
+
+.containContent {
+    margin: auto;
+    max-width: 800px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 // ---------------
@@ -35,8 +44,12 @@ body {
     color: $purple;
     font-size: 36px;
 }
-
-// Main Button
+.center {
+    text-align: center;
+}
+// -----------------------
+//       BUTTONS         -
+// -----------------------
 .cat-buttons {
     width: 200px;
     display: inline-block;    
@@ -55,12 +68,9 @@ body {
         transform: translateY(4px);
     }
 }
-// Simple text center
-.center {
-    text-align: center;
-}
-
-// All Sections
+// -----------------------
+//       SECTION         -
+// -----------------------
 section {
     padding-top: 20px;
     padding-bottom: 10px;
@@ -69,8 +79,43 @@ section {
         padding-bottom: 20px;
     }
 }
-
-// Navbar
+// -----------------------
+//       Bubble          -
+// -----------------------
+.dynamicBubble {
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 60px;
+    .previewBubble {
+        max-width: 300px;
+        min-width: 100px;
+        border: 2px solid $offwhite;
+        border-radius: 25px;
+        padding-top: 0;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 25px;
+        h3 {
+            margin-bottom: 0;
+            font-size: 36px;
+        }
+        .post-preview {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+}
+// -----------------------
+//       NAVBAR          -
+// -----------------------
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -109,8 +154,9 @@ nav {
         font-size: 72px;
     }
 }
-
-// Homepage Call to Action
+// -----------------------
+//       TOP             -
+// -----------------------
 #top {
     margin-top: 10vh;
     margin-bottom: 15vh;
@@ -131,71 +177,12 @@ nav {
         align-items: center;
     }
 }
-
-.containContent {
-    max-width: 800px;
-    margin: auto;
-    padding-left: 50px;
-    padding-right: 50px;
-
+// -----------------------
+//       Project         -
+// -----------------------
+#projectPreview {
+    border-top: 5px solid $purple;
 }
-
-.dynamicBubble {
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 25px;
-    padding-bottom: 60px;
-    padding-left: 25px;
-    .previewBubble {
-        max-width: 300px;
-        min-width: 100px;
-        border: 2px solid $offwhite;
-        border-radius: 25px;
-        padding-top: 0;
-        padding-left: 25px;
-        padding-right: 25px;
-        padding-bottom: 25px;
-        h3 {
-            margin-bottom: 0;
-            font-size: 36px;
-        }
-        .post-preview {
-            margin-bottom: 0;
-            font-size: 16px;
-        }
-        a {
-            text-decoration: none;
-        }
-    }
-}
-
-.blogBubble {
-    max-width: 300px;
-    min-width: 100px;
-    min-height: 150px;
-    border: 2px solid $offwhite;
-    border-radius: 25px;
-    padding-top: 0;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 25px;
-    h3 {
-        margin-bottom: 0;
-        font-size: 36px;
-    }
-    .post-preview {
-        margin-bottom: 0;
-        font-size: 16px;
-    }
-    a {
-        text-decoration: none;
-    }
-}
-
 #projectPage {
     img {
         width: 100%;
@@ -214,14 +201,9 @@ nav {
         }
     }
 }
-
-// Projects
-#projectPreview {
-    border-top: 5px solid $purple;
-}
-
-
-// Skills
+// -----------------------
+//       Skills          -
+// -----------------------
 #skills {
     border-top: 5px solid $purple;
     h2 {
@@ -265,12 +247,9 @@ nav {
         }
     }
 }
-
-// Blog
-#blogPreview {
-    border-top: 5px solid $purple;
-}
-
+// -----------------------
+//       About Me        -
+// -----------------------
 #aboutMe {
     border-top: 5px solid $purple;
     h2 {
@@ -295,7 +274,34 @@ nav {
         }
     }
 }
-
+// -----------------------
+//       BLOG            -
+// -----------------------
+#blogPreview {
+    border-top: 5px solid $purple;
+}
+.blogBubble {
+    max-width: 300px;
+    min-width: 100px;
+    min-height: 150px;
+    border: 2px solid $offwhite;
+    border-radius: 25px;
+    padding-top: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    h3 {
+        margin-bottom: 0;
+        font-size: 36px;
+    }
+    .post-preview {
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+    a {
+        text-decoration: none;
+    }
+}
 #blogPage {
     padding-top: 100px;
     img {
@@ -320,9 +326,8 @@ nav {
         }
     }
 }
-
 // -----------------------
-//         FOOTER
+//         FOOTER       -
 // -----------------------
 footer {
     border-top: 100px solid $purple;
@@ -339,10 +344,60 @@ footer {
     }
 }
 
-// -----------------------
-// Tablets
-// -----------------------
+// ---------------------------------------------
+// Special usecase of Screens Smaller then 550 -
+// ---------------------------------------------
+@media only screen and (max-width: 550px) {
 
+    #top {
+        margin-top: 5vh;
+        margin-bottom: 8vh;
+        .welcome-display {
+            h1 {
+                font-size: 36px;
+            }
+            img {
+                display: none;
+            }
+        }
+        .cta-click {
+            padding-left: 20px;
+            padding-right: 20px;
+
+        }
+
+    }
+    #skills {
+        h2 {
+            text-align: center;
+        }
+    }
+    h2 {
+        text-align: center;
+    }
+    #aboutMe {
+        h2 {
+            text-align: center;
+            padding-bottom: 20px;
+            margin: 0;
+        }
+        article {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img {
+                padding-bottom: 0;
+            }
+            p {
+                margin: 0;
+                max-width: 272px;
+            }
+        }
+    }
+} // End
+// -----------------------
+// Tablets and Desktop   -
+// -----------------------
 @media only screen and (min-width: 800px) {
 nav {
     top: 0;
@@ -372,7 +427,6 @@ nav {
             color: white;
         }
     }
-    // Hamburger Menu for Mobile
     .icon {
         display: none;
     }
@@ -382,20 +436,10 @@ nav {
     }
 } // End of Tablet
 
-// -----------------------
-// Desktops and big tablets
-// -----------------------
-@media only screen and (min-width: 960px) {
-
-} // End of Desktop
-
-// -----------------------
-// Mobile
-// -----------------------
+// --------------------------------------------------------
+// Only have the navbar animations work on small screens  -
+// --------------------------------------------------------
 @media only screen and (max-width: 800px) {
-// -----------------------
-// -   Animate NavBar    -
-// -----------------------
     #navLinks.menu-in {
         animation: menu-in 0.5s ease-in forwards;
     }
@@ -422,4 +466,4 @@ nav {
         width: 0px;
     }
 }
-} // End of Mobile
+} // End of Navbar animation

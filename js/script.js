@@ -1,10 +1,7 @@
 // ----------------
 // - NAV BAR MENU -
 // ----------------
-const navbarAnimation = document.getElementById("navLinks");
 const divElem = document.querySelector("#navLinks");
-const htmlElem = document.querySelector(":root");
-
 // Function runs when button is pressed
 function mobileMenu() {
   // The menu is open, so close it
