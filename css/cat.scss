@@ -13,15 +13,9 @@ body {
     font-family: $font;
 }
 
-
-
-#container {
-}
-
 // ---------------
 // - Reuse these -
 // ---------------
-
 .active {
     color: $purple;
 }
@@ -37,7 +31,7 @@ body {
     color: $purple;
     font-size: 36px;
 }
-// Global Buttons
+// Main Button
 .cat-buttons {
     width: 200px;
     display: inline-block;    
@@ -56,17 +50,25 @@ body {
         transform: translateY(4px);
     }
 }
-
-
 // Simple text center
 .center {
     text-align: center;
 }
 
+// All Sections
+section {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    h2 {
+        font-size: 42px;
+        padding-bottom: 20px;
+    }
+}
 
 // Navbar
 nav {
-    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
     height: 100px;
     top: 0;
     width: 100%;
@@ -74,7 +76,7 @@ nav {
     #navLinks {
         overflow: hidden;
         width: 0;
-        height: 72px;
+        height: 140px;
         background-color: #262627;
     }
     ul {
@@ -82,11 +84,9 @@ nav {
         overflow: hidden;
         list-style-type: none;
         li {
-            display: inline-block;
-            padding-left: 50px;
-            padding-right: 20px;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding-left: 20px;
+            margin-top: 10px;
+            padding-bottom: 5px;
         }
         a {
             font-size: 42px;
@@ -104,12 +104,14 @@ nav {
         font-size: 72px;
     }
 }
+
 // Homepage Call to Action
 #top {
-    margin-top: 300px;
-    margin-bottom: 300px;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
     .welcome-display {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         h1 {
@@ -118,22 +120,12 @@ nav {
     }
     .cta-click {
         display: flex;
+        flex-wrap: wrap;
         gap: 20px;
         justify-content: center;
         align-items: center;
     }
 }
-
-// All Sections
-section {
-    padding-top: 20px;
-    padding-bottom: 10px;
-    h2 {
-        font-size: 42px;
-        padding-bottom: 20px;
-    }
-}
-
 
 .containContent {
     max-width: 800px;
@@ -176,7 +168,6 @@ section {
     }
 }
 
-
 .blogBubble {
     max-width: 300px;
     min-width: 100px;
@@ -201,7 +192,6 @@ section {
 }
 
 #projectPage {
-    padding-top: 100px;
     img {
         width: 100%;
         height: auto;
@@ -230,7 +220,9 @@ section {
 #skills {
     border-top: 5px solid $purple;
     h2 {
+        text-align: right;
         padding-bottom: 0;
+
     }
     #skill-collection {
         justify-content: center;
@@ -258,32 +250,30 @@ section {
     border-top: 5px solid $purple;
 }
 
-
 #aboutMe {
     border-top: 5px solid $purple;
+    h2 {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        text-align: right;
+    }
     article {
         flex-direction: row;
         justify-content: center;
         align-items: center;
         img {
+            padding-bottom: 0;
             border: #D9D9D9;
             border-radius: 50%;
-            box-shadow: 0 4px 8px 0 rgba(165, 165, 165, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         p {
+            padding-top: 0;
             max-width: 250px;
+            font-size: 18px;
         }
     }
 }
-
-
-
-
-
-
-
-
-
 
 #blogPage {
     padding-top: 100px;
@@ -310,11 +300,6 @@ section {
     }
 }
 
-
-
-
-
-
 // -----------------------
 //         FOOTER
 // -----------------------
@@ -333,12 +318,6 @@ footer {
     }
 }
 
-
-
-
-
-
-
 // -----------------------
 // Tablets
 // -----------------------
@@ -350,6 +329,7 @@ nav {
     #navLinks {
         display: block;
         width: 100%;
+        height: 72px;
         margin-top: 0;
     }
     ul {
@@ -363,6 +343,7 @@ nav {
             padding-right: 20px;
             padding-top: 10px;
             padding-bottom: 10px;
+            margin-top: 0;
         }
         a {
             font-size: 42px;
@@ -385,18 +366,7 @@ nav {
 // -----------------------
 @media only screen and (min-width: 960px) {
 
-
-
-
 } // End of Desktop
-
-
-
-
-
-
-
-
 
 // -----------------------
 // Mobile
@@ -406,10 +376,10 @@ nav {
 // -   Animate NavBar    -
 // -----------------------
     #navLinks.menu-in {
-        animation: menu-in 0.7s ease-in forwards;
+        animation: menu-in 0.5s ease-in forwards;
     }
     #navLinks.menu-out {
-        animation: menu-out 0.7s ease-in forwards;
+        animation: menu-out 0.3s ease-in forwards;
     }
     // Keyframes
     @keyframes menu-in {
@@ -418,13 +388,13 @@ nav {
     }
 
     100% {
-        width: 400px;
+        width: 140px;
     }
     }
 
     @keyframes menu-out {
     0% {
-        width: 400px;
+        width: 140px;
     }
 
     100% {
