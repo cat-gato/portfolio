@@ -182,7 +182,38 @@ nav {
 // -----------------------
 #projectPreview {
     border-top: 5px solid $purple;
+    padding-bottom: 50px;
+    .projectGrid {
+        display: grid;
+        place-content: center;
+        gap: 25px;
+        .previewBubble {
+        max-width: 300px;
+        min-width: 100px;
+        border: 2px solid $offwhite;
+        border-radius: 25px;
+        padding-top: 0;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 25px;
+        h3 {
+            margin-bottom: 0;
+            font-size: 36px;
+        }
+        .post-preview {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+    }
 }
+
+
+
+
 #projectPage {
     img {
         width: 100%;
@@ -395,6 +426,16 @@ footer {
         }
     }
 } // End
+// -----------------------
+// Grid 2 Columns        -
+// -----------------------
+@media only screen and (min-width: 600px) {
+    #projectPreview {
+        .projectGrid {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
 // -----------------------
 // Tablets and Desktop   -
 // -----------------------
